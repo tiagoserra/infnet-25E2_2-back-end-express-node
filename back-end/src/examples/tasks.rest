@@ -1,0 +1,84 @@
+### Autenticação - Obter Token
+# Execute esta requisição primeiro para obter o token de acesso
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "login": "usuario",
+    "password": "senha123"
+}
+
+### Listar todas as tarefas
+GET http://localhost:3001/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+### Obter uma tarefa específica por ID
+# Substitua {id} por um ID válido da sua base de dados
+GET http://localhost:3001/api/tasks/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+### Criar uma nova tarefa
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+{
+    "name": "Estudar Node.js",
+    "type": "estudo",
+    "date": "2025-05-20T00:00:00.000Z",
+    "time": "14:00"
+}
+
+### Criar uma tarefa com dados incompletos (sem nome)
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+{
+    "type": "estudo",
+    "date": "2025-05-20T00:00:00.000Z",
+    "time": "14:00"
+}
+
+### Atualizar uma tarefa existente
+# Substitua {id} por um ID válido da sua base de dados
+PUT http://localhost:3001/api/tasks/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+{
+    "name": "Estudar Express atualizado",
+    "time": "15:30"
+}
+
+### Atualizar uma tarefa não existente
+PUT http://localhost:3001/api/tasks/999
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+{
+    "name": "Tarefa inexistente",
+    "time": "10:00"
+}
+
+### Excluir uma tarefa
+# Substitua {id} por um ID válido da sua base de dados
+DELETE http://localhost:3001/api/tasks/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+### Tentar excluir uma tarefa inexistente
+DELETE http://localhost:3001/api/tasks/999
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQiLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE3MTYwNTI4MDAsImV4cCI6MTcxNjA1NjQwMH0.EXEMPLO_TOKEN_AQUI_SUBSTITUA_PELO_SEU_TOKEN
+
+### Exemplo de requisição sem token de autorização (deve retornar erro 401)
+GET http://localhost:3001/api/tasks
+Content-Type: application/json
+
+### Exemplo de requisição com token inválido (deve retornar erro 403)
+GET http://localhost:3001/api/tasks
+Content-Type: application/json
+Authorization: Bearer token_invalido_123

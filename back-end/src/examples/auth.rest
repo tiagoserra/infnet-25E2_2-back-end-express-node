@@ -1,0 +1,25 @@
+### Autenticação - Login
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "login": "usuario",
+    "password": "senha123"
+}
+
+### Exemplo de requisição com credenciais inválidas
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "login": "usuario_invalido",
+    "password": "senha_invalida"
+}
+
+### Exemplo de requisição incompleta (sem senha)
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "login": "usuario"
+}
