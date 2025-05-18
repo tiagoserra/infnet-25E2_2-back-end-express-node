@@ -3,17 +3,19 @@
     "id": "1",
     "name": "Finalizar o projeto de Node.js",
     "type": "Trabalho",
-    "date": "2025-05-20T00:00:00.000Z",
+    "date": "2026-05-20",
     "time": "14:30",
+    "description": "Finalizar o projeto de Node.js",
     "createdAt": "2025-05-15T10:30:00.000Z",
-    "updatedAt": "2025-05-15T10:30:00.000Z"
+    "updatedAt": "2025-05-18T13:23:45.011Z"
   },
   {
     "id": "2",
     "name": "Reunião com o cliente",
     "type": "Reunião",
-    "date": "2025-05-19T00:00:00.000Z",
+    "date": "2025-05-19",
     "time": "10:00",
+    "description": "Reunião com o cliente",
     "createdAt": "2025-05-14T08:15:00.000Z",
     "updatedAt": "2025-05-14T08:15:00.000Z"
   },
@@ -21,8 +23,9 @@
     "id": "3",
     "name": "Comprar mantimentos",
     "type": "Pessoal",
-    "date": "2025-05-21T00:00:00.000Z",
+    "date": "2025-05-21",
     "time": "17:00",
+    "description": "Comprar mantimentos",
     "createdAt": "2025-05-16T19:45:00.000Z",
     "updatedAt": "2025-05-16T19:45:00.000Z"
   },
@@ -30,8 +33,9 @@
     "id": "4",
     "name": "Estudar Express.js",
     "type": "Estudo",
-    "date": "2025-05-22T00:00:00.000Z",
+    "date": "2025-05-22",
     "time": "09:30",
+    "description": "Estudar Express.js",
     "createdAt": "2025-05-17T21:20:00.000Z",
     "updatedAt": "2025-05-17T21:20:00.000Z"
   },
@@ -39,8 +43,9 @@
     "id": "5",
     "name": "Academia",
     "type": "Saúde",
-    "date": "2025-05-19T00:00:00.000Z",
+    "date": "2025-05-19",
     "time": "18:00",
+    "description": "Academia",
     "createdAt": "2025-05-14T14:10:00.000Z",
     "updatedAt": "2025-05-14T14:10:00.000Z"
   },
@@ -48,8 +53,9 @@
     "id": "6",
     "name": "Dentista",
     "type": "Saúde",
-    "date": "2025-05-25T00:00:00.000Z",
+    "date": "2025-05-25",
     "time": "11:15",
+    "description": "Dentista",
     "createdAt": "2025-05-10T16:30:00.000Z",
     "updatedAt": "2025-05-10T16:30:00.000Z"
   },
@@ -57,45 +63,19 @@
     "id": "7",
     "name": "Entregar relatório",
     "type": "Trabalho",
-    "date": "2025-05-23T00:00:00.000Z",
+    "date": "2025-05-23",
     "time": "16:00",
+    "description": "Entregar relatório",
     "createdAt": "2025-05-12T09:40:00.000Z",
     "updatedAt": "2025-05-12T09:40:00.000Z"
   },
   {
-    "id": "8",
-    "name": "Aniversário de amigo",
-    "type": "Pessoal",
-    "date": "2025-05-29T00:00:00.000Z",
-    "time": "19:30",
-    "createdAt": "2025-05-01T11:25:00.000Z",
-    "updatedAt": "2025-05-01T11:25:00.000Z"
-  },
-  {
-    "id": "9",
-    "name": "Manutenção do carro",
-    "type": "Pessoal",
-    "date": "2025-05-27T00:00:00.000Z",
-    "time": "13:00",
-    "createdAt": "2025-05-08T15:55:00.000Z",
-    "updatedAt": "2025-05-08T15:55:00.000Z"
-  },
-  {
-    "id": "10",
-    "name": "Revisão do código do projeto",
-    "type": "Trabalho",
-    "date": "2025-05-24T00:00:00.000Z",
-    "time": "11:00",
-    "createdAt": "2025-05-18T07:30:00.000Z",
-    "updatedAt": "2025-05-18T07:30:00.000Z"
-  },
-  {
-    "name": "Estudar Node.js",
-    "type": "estudo",
-    "date": "2025-05-20T00:00:00.000Z",
-    "time": "14:00",
-    "id": "eaaebd12-b304-467c-b0b5-bcc199b7979f",
-    "createdAt": "2025-05-18T12:13:04.004Z",
-    "updatedAt": "2025-05-18T12:13:04.004Z"
+    "name": "teste",
+    "date": "3333-12-12",
+    "time": "12:12",
+    "description": "teste",
+    "id": "c3facdaa-2831-4a49-86f7-24215eae8cf4",
+    "createdAt": "2025-05-18T13:25:27.694Z",
+    "updatedAt": "2025-05-18T13:25:27.694Z"
   }
 ]

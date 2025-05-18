@@ -39,7 +39,7 @@ export class TasksController {
         try {
             const taskData = req.body as Omit<Task, 'id' | 'createdAt' | 'updatedAt'>;
             
-            if (!taskData.name || !taskData.type) {
+            if (!taskData.name ) {
                 res.status(400).json({ message: 'Task name and type are required' });
                 return;
             }

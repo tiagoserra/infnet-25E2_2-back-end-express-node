@@ -8,12 +8,12 @@ dotenv.config();
 
 export class AuthService {
     private userRepository: UserRepository;
-    
+
     constructor() {
         this.userRepository = new UserRepository();
     }
 
-    async authenticate(login: string, password: string): Promise<string | null> {
+    async authenticate(login: string, password: string): Promise<object | null> {
         try {
 
             const user = await this.userRepository.getByLoginAndPassword(login, password);
@@ -23,8 +23,13 @@ export class AuthService {
             }
 
             const token = this.generateToken(user);
-            
-            return token;
+
+            return {
+                jwt: token,
+                username: user.name,
+                email: user.login,
+                id: user.id
+            };
         } catch (error) {
             console.error('Authentication error:', error);
             throw new Error('Authentication failed');
@@ -33,7 +38,7 @@ export class AuthService {
 
     private generateToken(user: User): string {
         const secret = process.env.JWT_SECRET;
-        
+
         if (!secret) {
             throw new Error('JWT_SECRET is not defined in environment variables');
         }

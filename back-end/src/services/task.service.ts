@@ -34,7 +34,7 @@ export class TaskService {
 
     async createTask(taskData: Omit<Task, 'id' | 'createdAt' | 'updatedAt'>): Promise<Task> {
         try {
-            if (!taskData.name || !taskData.type) {
+            if (!taskData.name) {
                 throw new Error('Task name and type are required');
             }
             

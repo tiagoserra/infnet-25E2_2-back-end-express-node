@@ -7,5 +7,14 @@
         "sessionId": "",
         "createdAt": "2025-05-17T14:30:00.000Z",
         "updatedAt": "2025-05-17T14:30:00.000Z"
+    },
+    {
+        "id": "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454",
+        "name": "Usuário Teste",
+        "login": "usuario@teste.com.br",
+        "password": "senha123",
+        "sessionId": "",
+        "createdAt": "2025-05-17T14:30:00.000Z",
+        "updatedAt": "2025-05-17T14:30:00.000Z"
     }
 ]
