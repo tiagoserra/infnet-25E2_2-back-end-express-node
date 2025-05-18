@@ -46,7 +46,7 @@ npm install
 
 3. Crie um arquivo `.env` na raiz do projeto backend com as seguintes variáveis:
 ```env
-PORT=3000
+PORT=3001
 JWT_SECRET=seu_segredo_jwt
 ```
 
@@ -130,10 +130,6 @@ projeto/
 - Armazenamento seguro do token JWT
 - Validação de formulários
 
-## 📚 Documentação da API
-
-A documentação da API estará disponível em `/api-docs` quando o servidor backend estiver rodando.
-
 ## 🤝 Contribuição
 
 1. Faça o fork do projeto
@@ -144,4 +140,4 @@ A documentação da API estará disponível em `/api-docs` quando o servidor bac
 
 ## 📄 Licença
 
-Este projeto está sob a licença ISC.
+Este projeto está sob a licença MIT.
