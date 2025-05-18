@@ -14,19 +14,30 @@ const Home = () => {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
   const [taskToDelete, setTaskToDelete] = useState(null);
+  const [shouldReload, setShouldReload] = useState(false);
 
   useEffect(() => {
     if (user?.jwt) {
-
       dispatch(fetchTasksAsync(user.jwt));
     } else {
       console.log('Token não disponível');
     }
   }, [dispatch, user]);
 
+  useEffect(() => {
+    if (shouldReload && user?.jwt) {
+      dispatch(fetchTasksAsync(user.jwt));
+      setShouldReload(false);
+    }
+  }, [shouldReload, dispatch, user]);
+
   const toggle = () => {
     setModalOpen(!modalOpen);
-    if (!modalOpen) setSelectedTask(null);
+    if (!modalOpen) {
+      setSelectedTask(null);
+    } else {
+      setShouldReload(true);
+    }
   };
 
   const toggleDeleteModal = () => {
@@ -46,6 +57,7 @@ const Home = () => {
   const confirmDelete = () => {
     dispatch(deleteTaskAsync({ token: user.jwt, taskId: taskToDelete.id }));
     setDeleteModalOpen(false);
+    setShouldReload(true);
   };
 
   if (status === 'loading') {
