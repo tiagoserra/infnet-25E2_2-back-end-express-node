@@ -1,9 +1,19 @@
-# Projeto Full Stack - Backend Express Node.js
+# Projeto Full Stack - Task Manager
 
-Este é o backend do projeto desenvolvido com Express.js e Node.js, utilizando TypeScript.
+Este é um projeto full stack de gerenciamento de tarefas, desenvolvido com React no frontend e Express.js + Node.js no backend.
 
 ## 🚀 Tecnologias Utilizadas
 
+### Frontend
+- React
+- Redux Toolkit
+- React Router
+- Reactstrap
+- Styled Components
+- React Icons
+- Axios
+
+### Backend
 - Node.js
 - Express.js
 - TypeScript
@@ -20,71 +30,109 @@ Este é o backend do projeto desenvolvido com Express.js e Node.js, utilizando T
 - Node.js (versão LTS recomendada)
 - npm ou yarn
 
-## 🔧 Instalação
+## 🔧 Instalação e Execução
 
-1. Clone o repositório:
-```bash
-git clone [URL_DO_REPOSITÓRIO]
-```
+### Backend
 
-2. Entre na pasta do backend:
+1. Entre na pasta do backend:
 ```bash
 cd back-end
 ```
 
-3. Instale as dependências:
+2. Instale as dependências:
 ```bash
 npm install
 ```
 
-4. Crie um arquivo `.env` na raiz do projeto backend com as seguintes variáveis:
+3. Crie um arquivo `.env` na raiz do projeto backend com as seguintes variáveis:
 ```env
 PORT=3000
 JWT_SECRET=seu_segredo_jwt
 ```
 
-## 🚀 Executando o Projeto
-
-### Desenvolvimento
-Para rodar o projeto em modo de desenvolvimento:
+4. Execute o backend:
 ```bash
+# Desenvolvimento
 npm run dev
+
+# Produção
+npm run build
+npm start
 ```
 
-### Produção
-Para build e execução em produção:
+### Frontend
+
+1. Em um novo terminal, entre na pasta do frontend:
 ```bash
-npm run build
+cd front-end
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Crie um arquivo `.env` na raiz do projeto frontend com as seguintes variáveis:
+```env
+REACT_APP_API_URL=http://localhost:3001
+```
+
+4. Execute o frontend:
+```bash
 npm start
 ```
 
 ## 📝 Scripts Disponíveis
 
+### Backend
 - `npm run dev`: Inicia o servidor em modo de desenvolvimento com hot-reload
 - `npm run build`: Compila o projeto TypeScript para JavaScript
 - `npm start`: Inicia o servidor em modo de produção
 - `npm run lint`: Executa o linter para verificar o código
 
+### Frontend
+- `npm start`: Inicia o servidor de desenvolvimento na porta 3001
+- `npm run build`: Cria a build de produção
+- `npm run test`: Executa os testes
+- `npm run eject`: Ejecta do Create React App
+
 ## 🔍 Estrutura do Projeto
 
 ```
-back-end/
-├── src/           # Código fonte
-├── dist/          # Código compilado
-├── node_modules/  # Dependências
-├── package.json   # Configurações e dependências
-└── tsconfig.json  # Configuração do TypeScript
+projeto/
+├── back-end/           # Backend Express + Node.js
+│   ├── src/           # Código fonte
+│   ├── dist/          # Código compilado
+│   ├── node_modules/  # Dependências
+│   ├── package.json   # Configurações e dependências
+│   └── tsconfig.json  # Configuração do TypeScript
+│
+└── front-end/         # Frontend React
+    ├── src/          # Código fonte
+    │   ├── components/    # Componentes React
+    │   ├── pages/        # Páginas da aplicação
+    │   ├── redux/        # Configuração do Redux
+    │   ├── services/     # Serviços e APIs
+    │   └── contexts/     # Contextos React
+    ├── public/       # Arquivos estáticos
+    └── package.json  # Configurações e dependências
 ```
 
 ## 🔒 Segurança
 
+### Backend
 - Implementação de rate limiting para proteção contra ataques de força bruta
 - Autenticação via JWT
 - Senhas criptografadas com bcrypt
 
+### Frontend
+- Proteção de rotas com autenticação
+- Armazenamento seguro do token JWT
+- Validação de formulários
+
 ## 📚 Documentação da API
 
-A documentação da API estará disponível em `/api-docs` quando o servidor estiver rodando.
+A documentação da API estará disponível em `/api-docs` quando o servidor backend estiver rodando.
 
 ## 🤝 Contribuição
 
